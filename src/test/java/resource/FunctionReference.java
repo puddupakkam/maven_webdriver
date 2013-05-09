@@ -44,7 +44,7 @@ public class FunctionReference extends Results {
             driver = new HtmlUnitDriver(true);
         }
         if (browser.contains("Chrome")) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");  //path of the   chromedriver
+            System.setProperty("webdriver.chrome.driver", "c:\\Selenium\\chromedriver.exe");  //path of the   chromedriver
             driver = new ChromeDriver();
         }
         if (browser.contains("InternetExplorer")) {
@@ -52,7 +52,6 @@ public class FunctionReference extends Results {
             driver = new InternetExplorerDriver();
         }
     }
-
 
     public void takeScreenshot() throws IOException {
         Random rand = new Random();
@@ -64,9 +63,6 @@ public class FunctionReference extends Results {
         copyFile(scrFile, new File(filename + ".png")); // add the path to store the screen shot
     }
 
-
-
-
     public void waitForElementNotPresent(By by) {
         WebDriverWait wait = new WebDriverWait(driver, 120);
         Boolean res = wait.until(ExpectedConditions.stalenessOf(driver.findElement(by)));
@@ -76,7 +72,6 @@ public class FunctionReference extends Results {
         WebDriverWait wait = new WebDriverWait(driver, t);
         Boolean res = wait.until(ExpectedConditions.stalenessOf(driver.findElement(by)));
     }
-
 
     public void readPDF() throws IOException {
         URL url = new URL(driver.getCurrentUrl());
@@ -88,7 +83,6 @@ public class FunctionReference extends Results {
         parser.getPDDocument().close();
         driver.close();
     }
-
 
     public boolean isElementPresent(By by) {
         try {
@@ -179,8 +173,6 @@ public class FunctionReference extends Results {
         }
         return value;
     }
-
-
 
     public void waitForElementVisible(By by) throws InterruptedException {
         for (int second = 0; ; second++) {

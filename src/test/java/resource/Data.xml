@@ -2,9 +2,10 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <comment>Created by Pavandeep Puddupakkam
-    Add the Browser, Environment Test Data and the Xpaths here</comment>
+        Add the Browser, Environment Test Data and the Xpaths here
+    </comment>
     <entry key="browser">Chrome</entry>
     <!--<entry key="browser">Firefox</entry>-->
     <!--<entry key="browser">InternetExplorer</entry>-->
-    <entry key="url"></entry>
+    <entry key="url">http://ninemsn.com.au</entry>
 </properties>

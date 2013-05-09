@@ -12,7 +12,7 @@ public class ReadXmlData {
 
     public String data(String node) {
         try {
-            File file = new File("/resource/Data.xml");
+            File file = new File("src/test/java/resource/Data.xml");
             FileInputStream fileInput = new FileInputStream(file);
             Properties properties = new Properties();
             properties.loadFromXML(fileInput);
