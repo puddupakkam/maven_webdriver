@@ -24,15 +24,10 @@ import static org.openqa.selenium.By.xpath;
 
 @SuppressWarnings("unused")
 public class FunctionReference extends Results {
-    ReadXmlData rxml = new ReadXmlData();
     public WebDriver driver;
-    public String browser = rxml.data("browser");
+    public String browser = "Chrome";
     public Integer resultcount = 0;
-    public String testresults;
-    public String grid = "No";
-    public String retrieve_selected_certificates = rxml.data("retrieve_selected_certificates");
-    String share_workspace = rxml.data("share_workspace");
-    public String purchase_history = rxml.data("purchase_history");
+    public String testresults;    
 
     @BeforeClass
     public void Startup() {
@@ -215,6 +210,11 @@ public class FunctionReference extends Results {
 
     public void rightClick(By by) {
         new Actions(driver).moveToElement(driver.findElement(by)).contextClick(driver.findElement(by)).perform();
+    }
+    
+    @AfterClass
+    public void teardown() throws Exception {        
+        driver.quit();
     }
 
 }
